@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Create books for {{ author.name }}</h1>
+    <button hx-post="{% url 'book-form' %}" hx-swap="beforeend" hx-target="#bookforms">
+        add book
+    </button>
+    <div id="bookforms"></div>
+{% endblock  %}
